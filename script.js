@@ -36,6 +36,7 @@ multiply.addEventListener('click', function(){
 
 /* Trenger en forklaring på hvorfor number1 og number2 må være innenfor funksjonen, 
 trodde de ble definert utenfor også kunne funksjonen hentet de? 
+Usikker på hvordan en skal bruke if statement for å velge kalkulering?
 */
 
 const time = new Date().getHours();
