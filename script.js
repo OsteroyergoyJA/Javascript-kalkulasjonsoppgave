@@ -1,6 +1,7 @@
 const summer = document.querySelector('#summer-button');
 const multiply = document.querySelector('#multiply')
 
+
 summer.addEventListener('click', function () {
   
   const number1 = document.querySelector('#number1').value; 
@@ -12,13 +13,18 @@ summer.addEventListener('click', function () {
   console.log(sum);
   
   const parentElement = document.querySelector('#main');
+
+  const existingElement = parentElement.querySelector('h3');
+ if (existingElement) { existingElement.remove();}
+
   const newElement = document.createElement('h3');
   newElement.textContent = sum;
   parentElement.appendChild(newElement);
-  
+
+ 
 });
 
-
+ 
 
 multiply.addEventListener('click', function(){
   const number1 = document.querySelector('#number1').value; 
@@ -27,6 +33,11 @@ multiply.addEventListener('click', function(){
   const sum = parseFloat(number1) * parseFloat(number2);
 
   const parentElement = document.querySelector('#main');
+
+  const existingElement = parentElement.querySelector('h3');
+  if (existingElement) { existingElement.remove();}
+ 
+
   const newElement = document.createElement('h3');
   newElement.textContent = sum;
   parentElement.appendChild(newElement);
